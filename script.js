@@ -1,6 +1,6 @@
 // #1 assignment
 
-let age, firstName, lastNamem, user
+let age, firstName, lastName, user;
 
 age = +prompt("How old are you?: ", 18);
 firstName = prompt("What's your name?: ");
@@ -8,9 +8,9 @@ lastName = prompt("What's your last name?: ");
 
 
 user = {
-  age: age,
-  firstName: firstName,
-  lastName: lastName,
+  age,
+  firstName,
+  lastName,
 }
 
 console.log(user);
@@ -31,7 +31,7 @@ function giveNumber() {
     giveNumber();
   } else {
     for (i = 0; i <= num; i++){
-      if (i % 4 !== 0) {
+      if (i % 4) {
         console.log(i);
       }
     }
