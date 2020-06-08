@@ -1,31 +1,232 @@
-main.index-main {
-  padding: 30px 0;
+@import "../../components/variables";
+
+.hero {
+
+  padding-bottom: 60px;
+
+  & h1 {
+    width: 280px;
+    display: inline-block;
+  }
+
+  & span {
+    @include typography($text...);
+    display: inline-block;
+    width: 226px;
+    margin-left: 40px;
+  }
 }
 
-.parallax-card {
-  max-width: 300px;
+.slider {
 
-  &__wrapper-img {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 100%;
+  &__image {
+    height: 465px;
+    width: 100%;
+    max-width: 1000px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 30px;
   }
-  &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: none;
-    height: 100%;
-    min-width: 100.5%;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  &__description {
-    background-color: #ff5722;
-    padding: 20px 10px;
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 61px;
+  }
+
+  &__button {
+    background-color: $mercury;
+    width: 10px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color .4s ease-in-out;
+
+    &_active {
+      background-color: $black;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $gray;
+    }
+  }
+}
+
+.about-me {
+  background-color: $wild-sand;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  h2 {
     text-align: center;
-    color: #fff;
+    margin: 0 0 51px ;
   }
-  &__paragraph {
-    margin: 0;
+
+  &__content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 578px;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 478px;
+    border: 3px solid $black;
+    padding: 15px 15px 35px 15px;
+    margin-bottom: 35px;
+
+    position: relative;
+
+    @include typography($text...);
+
+    &:nth-child(2) {
+      margin-left: 100px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #f6f6f6;
+      bottom: -17px;
+      right: 6%;
+      transform: rotate(45deg);
+      border-right: 3px solid #070707;
+      border-bottom: 3px solid #070707;
+    }
+
+    &:nth-child(2)::before {
+      left: 6%;
+    }
+  }
+}
+
+.skills {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+    @include typography($text...);
+  }
+  
+  &__section {
+    display: flex;
+  }
+}
+
+.portfolio {
+  text-align: center;
+  padding: 60px 0;
+  background-color: $wild-sand;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 1000px;
+    height: 604px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 23%;
+    width: 100%;
+  }
+
+  &__arrow {
+    width: 25px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 5px;
+      background-color: $black;
+      transform: rotate(45deg);
+      border-radius: 16px;
+      top: 23%;
+      left: -6%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 5px;
+      background-color: $black;
+      transform: rotate(135deg);
+      border-radius: 16px;
+      left: -6%;
+      bottom: 22%;
+    }
+
+    &--left {
+      transform: rotate(180deg);
+      margin-left: 30px;
+    }
+
+    &--right {
+      margin-right: 30px;
+    }
+  }
+
+  &__content {
+    padding: 31px 15px;
+    background-color: $black-opacity;
+        
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+    a {
+      color: $white;
+      border-bottom: 1px dashed;
+      @include typography($main-font, normal, 500, 18px, 21px);
+
+      &:hover {
+        border-bottom: 1px solid;
+      }
+    }
+
+    p {
+      @include typography($text-small...);
+      width: 100%;
+      max-width: 400px;
+      color: $white;
+    }
   }
 }

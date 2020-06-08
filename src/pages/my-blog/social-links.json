@@ -1,0 +1,26 @@
+[
+  {
+    "text": "instagram",
+    "class": "footer__social-link"
+  },
+  {
+    "text": "Vk",
+    "class": "footer__social-link"
+  },
+  {
+    "text": "Telegram",
+    "class": "footer__social-link"
+  },
+  {
+    "text": "Mail",
+    "class": "footer__social-link"
+  },
+  {
+    "text": "GirHub",
+    "class": "footer__social-link"
+  },
+  {
+    "text": "Phone",
+    "class": "footer__social-link"
+  }
+]

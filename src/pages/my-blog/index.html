@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <title>My blog</title>
+</head>
+<body>
+  @@include('header/index.html')
+    <main>
+      <section class="blog container">
+        <h1>My blog</h1>
+        <form action="" class="blog__filter">
+          <div class="blog__tags">
+            <span class="blog__label">Tags</span>
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--blue',
+              'checkbox': 'name="tags" checked'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--light-blue',
+              'checkbox': 'name="tags"'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--yellow',
+              'checkbox': 'name="tags"'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--aqua',
+              'checkbox': 'name="tags"'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--golden',
+              'checkbox': 'name="tags"'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--pink',
+              'checkbox': 'name="tags" checked'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--dark-blue',
+              'checkbox': 'name="tags"'
+            })
+            @@include('blog-checkbox/index.html', {
+              'class': 'blog__checkbox--green',
+              'checkbox': 'name="tags"'
+            })
+          </div>
+          <div class="blog__views">
+            <span class="blog__label">Views</span>
+            @@include('radio/index.html', {
+              'text': 'more 100',
+              'views': 'name="views" value="100"'
+            })
+            @@include('radio/index.html', {
+              'text': 'more 500',
+              'views': 'name="views" value="500" checked'
+            })
+            @@include('radio/index.html', {
+              'text': 'more 1000',
+              'views': 'name="views" value="1000"'
+            })
+          </div>
+          <div class="blog__comments">
+            <span class="blog__label">Comments</span>
+            <label class="blog__check">
+              <input type="checkbox" name="comments" class="blog__input">
+              <span class="blog__checkbox blog__checkbox--mercury"></span>
+              <span class="blog__checkbox-text">not a single</span>
+            </label>
+            <label class="blog__check">
+              <input type="checkbox" name="comments" class="blog__input">
+              <span class="blog__checkbox blog__checkbox--mercury"></span>
+              <span class="blog__checkbox-text">more 1</span>
+            </label>
+            <label class="blog__check">
+              <input type="checkbox" name="comments" class="blog__input">
+              <span class="blog__checkbox blog__checkbox--mercury"></span>
+              <span class="blog__checkbox-text">more 50</span>
+            </label>
+          </div>
+          <div class="blog__quantity">
+            <span class="blog__label">How show?</span>
+            @@include('radio/index.html', {
+              'text': 'more 100',
+              'views': 'name="quantity" value="5" checked'
+            })
+            @@include('radio/index.html', {
+              'text': 'more 500',
+              'views': 'name="quantity" value="10"'
+            })
+          </div>
+          <div class="blog__sorting">
+            <span class="blog__label">Sort by</span>
+            @@include('radio/index.html', {
+              'text': 'date',
+              'views': 'name="sorting" value="date"'
+            })
+            @@include('radio/index.html', {
+              'text': 'title',
+              'views': 'name="sorting" value="title" checked'
+            })
+            @@include('radio/index.html', {
+              'text': 'views',
+              'views': 'name="sorting" value="views"'
+            })
+          </div>
+          @@include('button/index.html', {
+            'text': 'Apply',
+            'class': 'blog__button btn__apply button--white'
+          })
+          <label class="blog__search search">
+            <input type="search" name="search" class="search__input">
+            @@include('button/index.html', {
+              'text': 'Search',
+              'class': 'blog__button search__button button--white'
+            })
+          </label>
+        </form>
+        @@loop('blog-post/index.html', 'blog-post.json')
+      </section>
+    </main>
+  @@include('footer/index.html')
+  <script src="scripts.js"></script>
+</body>
+</html>

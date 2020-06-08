@@ -1,0 +1,35 @@
+.checkbox {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &__input {
+    display: flex;
+    position: relative;
+
+    &:checked + .checkbox__box::before {
+      content: url(/static/images/check.svg);
+      position: absolute;
+      top: -1px;
+      left: 1px;
+    }
+  }
+
+  &__box {
+    display: block;
+
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+
+    border: 2px solid $black;
+    border-radius: 3px;
+    cursor: pointer;
+
+    position: relative;
+  }
+
+  &__text {
+    @include typography($main-font, normal, 500, 14px,16px)
+  }
+}

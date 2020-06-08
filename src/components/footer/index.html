@@ -1,8 +1,14 @@
-<footer>
-  <div class="container">
-    <span class="title-block title-block_one">Footer</span>
-    <a href="/">Главная</a>
-    <a href="/pages/catalog">Каталог</a>
-    <a href="/pages/toys">Игрушки</a>
-  </div>
+<footer class="footer container">
+  <h2>Contacts</h2>
+  <p>Want to know more or just chat? You are welcome!</p>
+  @@include('button/index.html', {
+    'text': 'Send message',
+    'class': 'button footer__button button--black',
+    'type': 'submit'
+  })
+  <ul class="footer__social-links">
+    @@loop('button/link.html', 'social-links.json')
+  </ul>
+  <span>Design by <a href="#">DL Academy</a></span>
+  <span>Program code from Antonina</span>
 </footer>

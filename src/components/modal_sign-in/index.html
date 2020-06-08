@@ -1,0 +1,20 @@
+<div class="modal-window">
+  <div class="modal-window__wrapper">
+    <form class="modal-window__form sign-in" action="">
+      <label class="sign-in__label label--whole">
+        <span class="sign-in__text">Email</span><span class="sign-in__required">*</span>
+        <input class="sign-in__input" type="text">
+      </label>
+      <label class="sign-in__label label--whole">
+        <span class="sign-in__text">Password</span><span class="sign-in__required">*</span>
+        <input class="sign-in__input" type="text">
+      </label>
+      @@include('button/index.html', {
+        'class': 'sign-in__button button--black',
+        'text': 'Log in',
+        'type': 'submit'
+      })
+    </form>
+    @@include('closing-button/index.html')
+  </div>
+</div>

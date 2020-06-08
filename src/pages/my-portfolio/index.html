@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/oswald.css" />
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <title>My portfolio</title>
+</head>
+<body>
+  @@include('header/index.html')
+  <main>
+    <section class="profile container">
+      <h1>My profile</h1>
+      <div class="profile__photo" style="background-image: url(/static/images/no-photo.svg);"></div>
+      <div class="profile__info">
+        <div class="profile__name"><span>Name:</span>Oksana</div>
+        <div class="profile__lastname"><span>Surname:</span>Larioshkina</div>
+        <div class="profile__email"><span>Email:</span>larioshkina@gmail.com</div>
+        <div class="profile__password"><span>Password:</span>**********</div>
+        <div class="profile__location"><span>Location:</span>Tolyatti</div>
+        <div class="profile__age"><span>Age:</span>23</div>
+        @@include('button/index.html', {
+          "class": "profile__button button--white",
+          "type": "button",
+          "text": "Change password"
+        })
+        @@include('button/index.html', {
+          "class": "profile__button button--white",
+          "type": "button",
+          "text": "Change other data"
+        })
+        @@include('button/index.html', {
+          "class": "profile__button button--white",
+          "type": "button",
+          "text": "Delete account"
+        })
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html')
+  <script src="scripts.js"></script>
+</body>
+</html>

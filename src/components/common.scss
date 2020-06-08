@@ -1,28 +1,162 @@
-// Подключение компонентов
-@import "./header/header";
-@import "./footer/footer";
+@import "./variables";
 
-body {
-  font-family: Oswald, sans-serif;
+body { 
+  margin: 0;
+  overflow-x: hidden;
+
+  @include typography(
+    $main-font,
+    normal,
+    normal,
+    18px,
+    22px
+  );
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  @include typography($title-one...);
+}
+
+h2 {
+  @include typography($title-two...);
+}
+
+h3 {
+  @include typography($title-three...);
+}
+a { 
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+html { 
+  box-sizing: border-box; 
+}
+
+*, 
+*::before, 
+*::after { 
+  box-sizing: inherit; 
+}
+
+img { 
+  max-width: 100%; 
 }
 
 .container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1040px;
+  padding: 0 20px;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
-.title-block {
-  margin: 0 0 20px 0;
+.hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
 
-  &_one {
-    font-size: 30px;
-    text-transform: uppercase;
+.modal-window {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  background-color: $wild-sand;
+
+  &__wrapper {
+    position: relative;
+    margin: auto;
   }
-  &_two {
-    font-size: 25px;
-    max-width: 500px;
+
+  &__form {
+    padding: 40px;
+    background-color: $white;
+    box-shadow: 0 0 0 2px $black;
+
+    @include typography($text-small...);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
+
+label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label--whole {
+  flex: 0 1 100%;
+}
+
+.label--half {
+  flex: 0 1 48%;
+}
+
+input[type=text],
+input[type=search] {
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 0 solid transparent;
+  box-shadow: 0 0 0 2px $mercury;
+  outline: none;
+  cursor: pointer;
+
+
+  &:hover {
+    box-shadow: 0 0 0 2px $gray;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $black;
+  }
+}
+
+textarea {
+  border: 0 solid transparent;
+  box-shadow: 0 0 0 2px $mercury;
+  outline: none;
+
+
+  &:hover {
+    box-shadow: 0 0 0 2px $gray;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $black;
+  }
+}
+
+@import "./button/button";
+@import "./arrow/arrow";
+@import "./skills-card/skills-card";
+@import "./modal_sign-in/sign-in";
+@import "./modal_register/register";
+@import "./modal_send-message/send-message";
+
+@import "./closing-button/closing-button";
+@import "./checkbox/checkbox";
+@import "./blog-checkbox/blog-checkbox";
+@import "./radio/radio";
+@import "./blog-post/blog-post";
+
+@import "./header/header";
+@import "./footer/footer";

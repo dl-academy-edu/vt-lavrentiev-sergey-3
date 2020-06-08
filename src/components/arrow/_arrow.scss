@@ -1,0 +1,70 @@
+.arrow {
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0 0 0 2px $black;
+  transition: box-shadow .4s ease-in-out;
+
+  position: relative;
+
+  &--left {
+    transform: rotate(180deg);
+  }
+
+  &--top {
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 20px;
+    right: 100px;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+
+    &--active {
+      opacity: 1;
+      bottom: 50px;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    background-color: $black;
+    transform: rotate(45deg);
+    border-radius: 16px;
+    left: 35%;
+    top: 35%;
+    transition: background-color .4s ease-in-out;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    background-color: $black;
+    transform: rotate(135deg);
+    border-radius: 16px;
+    left: 35%;
+    bottom: 35%;
+    transition: background-color .4s ease-in-out;
+  }
+
+  
+
+  
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 2px $gray;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $gray;
+  }
+}

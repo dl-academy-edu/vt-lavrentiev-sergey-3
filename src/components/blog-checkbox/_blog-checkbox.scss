@@ -1,0 +1,95 @@
+.blog {
+
+  &__check {
+    margin-top: 5px;
+  }
+
+  &__input {
+    appearance: none;
+  }
+
+  &__checkbox {
+    width: 25px;
+    height: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &-text {
+      @extend .radio__text;
+    }
+
+    &--mercury {
+      box-shadow: inset 0 0 0 3px $mercury;
+      margin-bottom: 5px;
+      transition: box-shadow .4s ease-in-out;
+    }
+    
+    
+    &--blue {
+      box-shadow: inset 0 0 0 3px #2176FF;
+    }
+    
+    &--light-blue {
+      box-shadow: inset 0 0 0 3px #33A1FD;
+    }
+    
+    &--yellow {
+      box-shadow: inset 0 0 0 3px #FDCA40;
+    }
+    
+    &--aqua {
+      box-shadow: inset 0 0 0 3px #57E2E5;
+    }
+    
+    &--golden {
+      box-shadow: inset 0 0 0 3px #F79824;
+    }
+    
+    &--pink {
+      box-shadow: inset 0 0 0 3px #E08DAC;
+    }
+    
+    &--dark-blue {
+      box-shadow: inset 0 0 0 3px #6A7FDB;
+    }
+    
+    &--green {
+      box-shadow: inset 0 0 0 3px #45CB85;
+    }
+    
+  }
+
+  &__input:checked + &__checkbox {
+    box-shadow: inset 0 0 0 3px $black;
+    background-image: url('/static/images/blog-check.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &--blue {
+      filter: invert(31%) sepia(94%) saturate(2039%) hue-rotate(209deg) brightness(102%) contrast(101%);
+    }
+
+    &--light-blue {
+      filter: invert(51%) sepia(47%) saturate(3912%) hue-rotate(191deg) brightness(109%) contrast(98%);
+    }
+    &--yellow {
+      filter: invert(83%) sepia(65%) saturate(911%) hue-rotate(325deg) brightness(105%) contrast(98%);
+    }
+    &--aqua {
+      filter: invert(98%) sepia(85%) saturate(2125%) hue-rotate(142deg) brightness(101%) contrast(79%);
+    }
+    &--golden {
+      filter: invert(68%) sepia(44%) saturate(1550%) hue-rotate(341deg) brightness(98%) contrast(97%);
+    }
+    &--pink{
+      filter: invert(90%) sepia(16%) saturate(4330%) hue-rotate(288deg) brightness(96%) contrast(82%);
+    }
+    &--dark-blue {
+      filter: invert(57%) sepia(8%) saturate(3542%) hue-rotate(192deg) brightness(89%) contrast(93%);
+    }
+    &--green {
+      filter: invert(61%) sepia(58%) saturate(448%) hue-rotate(96deg) brightness(102%) contrast(84%);
+    }
+
+  }
+}
