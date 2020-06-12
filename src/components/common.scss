@@ -2,7 +2,6 @@
 
 body { 
   margin: 0;
-  overflow-x: hidden;
 
   @include typography(
     $main-font,
@@ -76,8 +75,14 @@ img {
   height: 100vh;
   width: 100vw;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
   display: flex;
   background-color: $wild-sand;
+
+  transition: all 0.5s ease-in-out;
 
   &__wrapper {
     position: relative;
@@ -94,6 +99,10 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  &--hidden {
+    display: none;
   }
 }
 
@@ -145,6 +154,7 @@ textarea {
   }
 }
 
+@import "./main-slider/main-slider";
 @import "./button/button";
 @import "./arrow/arrow";
 @import "./skills-card/skills-card";

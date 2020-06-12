@@ -17,50 +17,6 @@
   }
 }
 
-.slider {
-
-  &__image {
-    height: 465px;
-    width: 100%;
-    max-width: 1000px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin-bottom: 30px;
-  }
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 61px;
-  }
-
-  &__button {
-    background-color: $mercury;
-    width: 10px;
-    height: 12px;
-    border: none;
-    border-radius: 50%;
-    transition: background-color .4s ease-in-out;
-
-    &_active {
-      background-color: $black;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $gray;
-    }
-  }
-}
-
 .about-me {
   background-color: $wild-sand;
   padding-bottom: 60px;

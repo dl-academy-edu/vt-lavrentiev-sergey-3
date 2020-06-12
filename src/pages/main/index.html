@@ -16,25 +16,7 @@
       <section class="hero container">
         <h1>Antonina Antoninovna</h1>
         <span>Future front-end developer 23 years old, Tolyatti</span>
-        <div class="slider">
-          <div class="slider__image" style="background-image: url(/static/images/lady-main.jpg);"></div>
-          <div class="slider__nav">
-            @@include('arrow/index.html', {
-              'class': 'arrow slider__arrow arrow--left'
-            })
-            <div>
-              <div class="slider__buttons">
-                <button type="button" class="slider__button slider__button_active"></button>
-                <button type="button" class="slider__button"></button>
-                <button type="button" class="slider__button"></button>
-                <button type="button" class="slider__button"></button>
-              </div>
-            </div>
-            @@include('arrow/index.html', {
-              'class': 'arrow slider__arrow arrow--right'
-            })
-          </div>
-        </div>
+        @@include('main-slider/index.html')
       </section>
       <section class="about-me">
         <h2>About me</h2>
