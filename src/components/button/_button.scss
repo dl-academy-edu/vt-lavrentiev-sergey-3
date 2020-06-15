@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  padding: 10px 19px;
+  margin: 0;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 2px solid $black;
+
+  @include typography($text-bold...);
+
+  transition: all .4s ease-in-out; 
+  
+  &--white {
+  
+    &:hover {
+        background-color: $black;
+        color: $white;
+        box-shadow: none;
+    }
+  }
+
+  &--black {
+    background-color: $black;
+    color: $white;
+    
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+  }
+}

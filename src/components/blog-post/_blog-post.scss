@@ -1,0 +1,53 @@
+.post {
+  width: 100%;
+  padding-left: 32%;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  margin-bottom: 20px;
+
+  background-repeat: no-repeat;
+  background-position: left top 20px;
+  background-size: 32%;
+
+  box-shadow: 0 -2px 0 0 $mercury;
+
+  &__content {
+    margin-left: 20px;
+  }
+
+  &__tag {
+    display: block;
+    width: 30px;
+    height: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    background: #F79824;
+    border-radius: 5px;
+  }
+
+  &__date,
+  &__views,
+  &__comments {
+    @include typography($text-small...);
+    color: $gray;
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    @include typography($text-bold...);
+    color: $black;
+    text-decoration: underline;
+  }
+}

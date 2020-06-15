@@ -1,0 +1,27 @@
+[
+  {
+    "img": "html5.svg",
+    "name": "HTML 5",
+    "percent": "85%"
+  },
+  {
+    "img": "css.svg",
+    "name": "CSS/SCSS",
+    "percent": "55%"
+  },
+  {
+    "img": "js.svg",
+    "name": "JavaScript",
+    "percent": "5%"
+  },
+  {
+    "img": "git-icon.png",
+    "name": "Git/GitHub",
+    "percent": "15%"
+  },
+  {
+    "img": "figma.svg",
+    "name": "Figma",
+    "percent": "80%"
+  }
+]

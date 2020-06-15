@@ -1,0 +1,16 @@
+.register {
+  width: 680px;
+
+  &__text {
+    @extend .sign-in__text;
+  }
+
+  &__required {
+    @extend .sign-in__required;
+  }
+
+  &__checkbox {
+    flex: 0 1 100%;
+    margin-bottom: 20px;
+  }
+}

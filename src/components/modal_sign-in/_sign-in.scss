@@ -1,0 +1,17 @@
+.sign-in {
+  width: 370px;
+
+  &__text {
+    margin-right: 5px;
+    margin-bottom: 6px;
+  }
+
+  &__required {
+    color: $pomegranade;
+  }
+
+  &__button {
+    margin-top: 10px;
+  }
+
+}

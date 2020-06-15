@@ -2,43 +2,65 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link href="/common.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/fonts/oswald.css" />
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <title>Главная</title>
+    <title>Main</title>
   </head>
   <body>
     @@include('header/index.html')
-    <main class="index-main">
-      <div class="container">
-        <h1 class="title-block title-block_one">Главная</h1>
-        <h2 class="title-block title-block_two">
-          Вы находитесь на главной странице
-        </h2>
-        <div class="parallax-card">
-          <div class="parallax-card__wrapper-img">
-            <img
-              class="parallax-card__img"
-              src="static/images/cactus.jpg"
-              alt="Картинка кактуса"
-            />
+    <main>
+      <section class="hero container">
+        <h1>Antonina Antoninovna</h1>
+        <span>Future front-end developer 23 years old, Tolyatti</span>
+        @@include('main-slider/index.html')
+      </section>
+      <section class="about-me">
+        <h2>About me</h2>
+        <div class="about-me__content">
+          <p class="about-me__text">
+            Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.
+          </p>
+          <p class="about-me__text">
+            Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.
+          </p>
+          <p class="about-me__text">
+            Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. 
+          </p>
+        </div>
+      </section>
+      <section class="skills container">
+        <h2>Skills</h2>
+        <p>I work in such programs as</p>
+        <div class="skills__section">
+          @@loop('skills-card/index.html', 'skills-card.json')
+        </div>
+      </section>
+      <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio__slider" style="background-image: url(/static/images/site-pic.jpg);">
+          <div class="portfolio__nav">
+            <button type="button" class="portfolio__arrow portfolio__arrow--left"></button>
+            <button type="button" class="portfolio__arrow portfolio__arrow--right"></button>
           </div>
-
-          <div class="parallax-card__description">
-            <p class="parallax-card__paragraph">Кактус маминой подруги</p>
-            <p class="parallax-card__paragraph">
-              Не нужно поливать и никогда не сохнет
-            </p>
+          <div class="portfolio__content">
+            <a href="#">Learning site for DL Academy courses</a>
+            <p>A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
           </div>
         </div>
-      </div>
+      </section>
+      @@include('arrow/index.html', {
+        'class': 'arrow arrow--top arrow--top_js'
+      })
     </main>
     @@include('footer/index.html')
+    @@include('modal_sign-in/index.html')
+    @@include('modal_register/index.html')
+    @@include('modal_send-message/index.html')
+    <script src="index.js"></script>
     <script src="scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,50 @@
+@import "../../components/variables";
+
+.blog {
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 116px;
+    justify-content: space-between;
+
+  }
+
+  &__label {
+    @include typography($text-small...);
+    flex: 0 1 100%;
+    margin-bottom: 5px;
+  }
+
+  &__views,
+  &__comments,
+  &__sorting,
+  &__quantity {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.btn__apply {
+  align-self: center;
+}
+
+.search {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 35px;
+
+  &__input {
+    flex: 0 1 86%;
+  }
+}
+

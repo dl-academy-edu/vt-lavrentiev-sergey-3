@@ -1,0 +1,47 @@
+[
+  {
+    "image": "new-dog",
+    "datetime": "2020.01.20",
+    "date": "20.01.2020",
+    "views": "223 views",
+    "comments":"97 comments",
+    "title": "This is my new dog.",
+    "text": "Duis sit odio dui pretium suspendisse malesuada sit leo in. Massa nec eget etiam tellus ac. Sodales nibh pellentesque donec eu ultrices tortor condimentum massa."
+  },
+  {
+    "image": "roosters",
+    "datetime": "2020.01.17",
+    "date": "17.01.2020",
+    "views": "12 views",
+    "comments":"0 comments",
+    "title": "Why do roosters scream in the morning?",
+    "text": "Erat nunc parturient feugiat egestas adipiscing erat eu. Non neque mi volutpat et lectus."
+  },
+  {
+    "image": "roo",
+    "datetime": "2020.01.17",
+    "date": "17.01.2020",
+    "views": "337 views",
+    "comments":"48 comments",
+    "title": "Kangaroo. Start.",
+    "text": "At leo at nisl tortor egestas. Mauris luctus est luctus massa tellus erat gravida. Eget aenean eget diam habitant risus. Dapibus et, nec platea felis. Facilisi ut leo arcu, semper id pellentesque quisque ultrices etiam."
+  },
+  {
+    "image": "duck",
+    "datetime": "2020.01.15",
+    "date": "15.01.2020",
+    "views": "222 views",
+    "comments":"14 comments",
+    "title": "Met a duckling at the pond.",
+    "text": "Nulla tempus mauris sed vel bibendum. Felis urna suspendisse amet, laoreet sagittis. Semper pellentesque condimentum vitae morbi in dui. Et in et diam massa."
+  },
+  {
+    "image": "dogs",
+    "datetime": "2020.01.20",
+    "date": "20.01.2020",
+    "views": "122 views",
+    "comments":"23 comments",
+    "title": "Can dogs also be friends?",
+    "text": "Eu, libero aliquet nibh turpis quis nulla et ullamcorper purus. Consequat egestas sed sagittis morbi lacus. Consectetur et justo, sagittis vitae mi faucibus urna, eu. "
+  }
+]

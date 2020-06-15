@@ -1,0 +1,38 @@
+<div class="modal-window modal-window--hidden modal-window__message--js">
+  <div class="modal-window__wrapper">
+    <form class="modal-window__form message" action="">
+      <label class="message__label label--half label--half">
+        <span class="message__text">What is your name?</span><span class="message__required">*</span>
+        <input class="message__input" type="text">
+      </label>
+      <label class="message__label label--half">
+        <span class="message__text">Messsage subject</span><span class="message__required">*</span>
+        <input class="message__input" type="text">
+      </label>
+      <label class="message__label label--half">
+        <span class="message__text">Your Email</span><span class="message__required">*</span>
+        <input class="message__input" type="text">
+      </label>
+      <label class="message__label label--half">
+        <span class="message__text">Your mobile phone</span><span class="message__required">*</span>
+        <input class="message__input" type="text">
+      </label>
+      <label class="message__label label--whole">
+        <span class="message__text">What do you want to discuss with me?</span></span>
+        <textarea class="message__textarea"></textarea>
+      </label>
+      @@include('checkbox/index.html', {
+        'class': 'message__checkbox',
+        'text': 'Clicking on the button, you consent to the processing of your personal data.',
+        'name': 'accept',
+        'value': 'accept'
+      })
+      @@include('button/index.html', {
+        'class': 'message__button button--black',
+        'text': 'Send',
+        'type': 'submit'
+      })
+    </form>
+    @@include('closing-button/index.html')
+  </div>
+</div>

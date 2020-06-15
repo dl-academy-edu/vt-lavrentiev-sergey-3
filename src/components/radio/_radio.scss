@@ -1,0 +1,33 @@
+.radio {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  
+
+  &__input {
+    appearance: none;
+  }
+
+  &__btn {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px $mercury;
+    transition: box-shadow .4s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__input:checked + &__btn {
+    box-shadow: inset 0 0 0 3px $black,
+                inset 0 0 0 6px $white,
+                inset 0 0 0 13px $black;
+    
+  }
+
+  &__text {
+    @include typography($text...);
+    line-height: 25px;
+    margin-left: 12px;
+  }
+}

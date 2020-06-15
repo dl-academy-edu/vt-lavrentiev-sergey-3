@@ -1,0 +1,46 @@
+<div class="modal-window modal-window__register--js modal-window--hidden">
+  <div class="modal-window__wrapper">
+    <form class="modal-window__form register" action="">
+      <label class="register__label label--whole">
+        <span class="register__text">Email</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half label--half">
+        <span class="register__text">Name</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half">
+        <span class="register__text">Surname</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half">
+        <span class="register__text">Password</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half">
+        <span class="register__text">Repeat password</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half">
+        <span class="register__text">Location</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      <label class="register__label label--half">
+        <span class="register__text">Age</span><span class="register__required">*</span>
+        <input class="register__input" type="text">
+      </label>
+      @@include('checkbox/index.html', {
+        'class': 'register__checkbox',
+        'text': 'Clicking on the button, you consent to the processing of your personal data.',
+        'name': 'accept',
+        'value': 'accept'
+      })
+      @@include('button/index.html', {
+        'class': 'register__button button--black',
+        'text': 'Send',
+        'type': 'submit'
+      })
+    </form>
+    @@include('closing-button/index.html')
+  </div>
+</div>
